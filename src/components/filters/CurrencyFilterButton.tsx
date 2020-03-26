@@ -6,6 +6,6 @@ interface Props {
 
 export default function CurrencyFilterButton({ currency }: Props): ReactElement {
     return (
-        <button>{currency}</button>
+        <button className="btnCurrency">{currency}</button>
     )
 }

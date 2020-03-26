@@ -5,10 +5,10 @@ import TransferFilters from './TransferFilter';
 class Filters extends Component {
     render() {
         return (
-            <>
+            <div className="filtersContainer">
                 <CurrencyFilter />
                 <TransferFilters />
-            </>
+            </div>
         );
     }
 }
