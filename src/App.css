@@ -144,8 +144,14 @@ input[type="checkbox"]:checked + label:after {
   cursor: pointer;
 }
 
-.flightInfoContainer {
-  columns: 2;
+.flightInfoContainerLeft {
+  float: left;
+  width: 180px;
+}
+
+.flightInfoContainerRight {
+  float: right;
+  width: 180px;
 }
 
 .ticketContainer {
@@ -179,5 +185,9 @@ input[type="checkbox"]:checked + label:after {
 
 .date {
   color: #8B9497;
+  font-size: 10px;
+}
+
+.airport {
   font-size: 10px;
 }
