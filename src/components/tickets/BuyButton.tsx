@@ -1,13 +1,14 @@
 import React, { ReactElement } from 'react'
 
 interface Props {
-    title: string,
-    price: any,
-    currency: string
+    [key: string]: any
 }
 
-export default function BuyButton({ title, price, currency }: Props): ReactElement {
+export default function BuyButton({ price, currency }: Props): ReactElement {
     return (
-        <button>{title}{price}{currency}</button>
+        <button className="btnBuy">
+            <div>Купить</div>
+            за {price}{currency}
+        </button>
     )
 }

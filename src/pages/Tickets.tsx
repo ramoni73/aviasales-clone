@@ -8,7 +8,7 @@ interface Props {
 
 export default function Tickets({ }: Props): ReactElement {
     return (
-        <div>
+        <div className="grid">
             <Filters />
             <TicketsContainer />
         </div>

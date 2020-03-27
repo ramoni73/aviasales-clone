@@ -3,14 +3,14 @@ import BuyButton from './BuyButton'
 import airlineLogo from './airlineLogo.svg'
 
 interface Props {
-    
+    [key: string]: any
 }
 
-export default function BuySection({}: Props): ReactElement {
+export default function BuySection({ data }: Props): ReactElement {
     return (
-        <div>
+        <div className="buySectionContainer">
             <img src={airlineLogo} alt="airlineLogo" />
-            <BuyButton title={"Купить за"}  price={"22 000"} currency={"RUB"} />
+            <BuyButton price={data.price} currency={" RUB"} />
         </div>
     )
 }

@@ -6,7 +6,7 @@ import Tickets from './pages/Tickets';
 function App() {
   return (
     <>
-      <img src={logo} alt="logo" />
+    <div className="a-center"><img src={logo} alt="logo" /></div>
       <Tickets />
     </>
   );

@@ -9,6 +9,7 @@ export default function TicketsContainer({}: Props): ReactElement {
     return (
         <div>
             <Ticket />
+            <Ticket />
         </div>
     )
 }

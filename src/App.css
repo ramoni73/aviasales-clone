@@ -1,6 +1,11 @@
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  background-color: #F3F7FA;
+  background-color: #f3f7fa;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .btnCurrency {
@@ -117,4 +122,62 @@ input[type="checkbox"]:checked + label:after {
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 0 10px 1px rgba(221, 221, 221, 1);
+}
+
+.buySectionContainer {
+  text-align: center;
+  border-right: 1px solid #ECEFF1;
+  vertical-align: center;
+}
+
+.btnBuy {
+  width: 160px;
+  height: 56px;
+  background-color: #FF6D00;
+  border-radius: 5px;
+  font-size: 19px;
+  color: #ffffff;
+}
+
+.btnBuy:hover {
+  background-color: #FF8124;
+  cursor: pointer;
+}
+
+.flightInfoContainer {
+  columns: 2;
+}
+
+.ticketContainer {
+  width: 566px;
+  height: 161px;
+  margin-bottom: 17px;
+  padding: 0 8.5px 0 8.5px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 1px rgba(221, 221, 221, 1);
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  grid-auto-rows: 161px;
+  grid-gap: 0.5em;
+}
+
+.a-center {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  grid-auto-rows: 2em;
+  grid-gap: 0.5em;
+}
+
+.time {
+  font-size: 26px;
+}
+
+.date {
+  color: #8B9497;
+  font-size: 10px;
 }

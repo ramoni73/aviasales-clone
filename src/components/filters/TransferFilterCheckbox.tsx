@@ -1,8 +1,7 @@
 import React, { ReactElement } from 'react'
 
 interface Props {
-    title: string
-    value: any
+    [key: string]: any
 }
 
 export default function TransferFilterCheckbox({ title, value }: Props): ReactElement {

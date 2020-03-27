@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import FlightInfo from './FlightInfo'
+import BuySection from './BuySection'
 
 interface Props {
 
@@ -7,20 +8,21 @@ interface Props {
 
 export default function Ticket({ }: Props): ReactElement {
     const data = {
-        origin: "Consequat in dolore irure.",
-        origin_name: "Consequat in dolore irure.",
-        destination: "Consequat in dolore irure.",
-        destination_name: "Consequat in dolore irure.",
-        departure_date: "Consequat in dolore irure.",
-        departure_time: "Consequat in dolore irure.",
-        arrival_date: "Consequat in dolore irure.",
-        arrival_time: "Consequat in dolore irure.",
-        carrier: "Consequat in dolore irure.",
-        stops: "Consequat in dolore irure.",
-        price: "Consequat in dolore irure."
+        origin: "VVO",
+        origin_name: "Владивосток",
+        destination: "TLV",
+        destination_name: "Тель - Авив",
+        departure_date: "12.05.18",
+        departure_time: "16:20",
+        arrival_date: "12.05.18",
+        arrival_time: "22:10",
+        carrier: "TK",
+        stops: 3,
+        price: 12400,
     }
     return (
-        <div>
+        <div className="ticketContainer">
+            <BuySection data={data} />
             <FlightInfo data={data} />
         </div>
     )

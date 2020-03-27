@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 
 interface Props {
-    currency: String
+    [key: string]: any
 }
 
 export default function CurrencyFilterButton({ currency }: Props): ReactElement {
