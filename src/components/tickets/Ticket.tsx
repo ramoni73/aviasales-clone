@@ -1,12 +1,8 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import FlightInfo from './FlightInfo'
 import BuySection from './BuySection'
 
-interface Props {
-
-}
-
-export default function Ticket({ }: Props): ReactElement {
+const Ticket = () => {
     const data = {
         origin: "VVO",
         origin_name: "Владивосток",
@@ -19,11 +15,14 @@ export default function Ticket({ }: Props): ReactElement {
         carrier: "TK",
         stops: 3,
         price: 12400,
-    }
+    };
+
     return (
         <div className="ticketContainer">
             <BuySection data={data} />
             <FlightInfo data={data} />
         </div>
     )
-}
+};
+
+export default Ticket

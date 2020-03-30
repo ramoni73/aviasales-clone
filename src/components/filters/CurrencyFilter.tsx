@@ -1,11 +1,7 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import CurrencyFilterButton from './CurrencyFilterButton'
 
-interface Props {
-
-}
-
-export default function CurrencyFilter({ }: Props): ReactElement {
+const CurrencyFilter = () => {
     return (
         <div>
             <p className="filterText">ВАЛЮТА</p>
@@ -14,4 +10,6 @@ export default function CurrencyFilter({ }: Props): ReactElement {
             <CurrencyFilterButton currency={"EUR"} />
         </div>
     )
-}
+};
+
+export default CurrencyFilter

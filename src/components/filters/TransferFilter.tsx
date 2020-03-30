@@ -1,11 +1,7 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import TransferFilterCheckbox from './TransferFilterCheckbox'
 
-interface Props {
-    
-}
-
-export default function TransferFilter({}: Props): ReactElement {
+const TransferFilter = () => {
     return (
         <div>
             <p className="filterText">КОЛИЧЕСТВО ПЕРЕСАДОК</p>
@@ -16,4 +12,6 @@ export default function TransferFilter({}: Props): ReactElement {
             <TransferFilterCheckbox title={"3 пересадки"} value={3} />
         </div>
     )
-}
+};
+
+export default TransferFilter

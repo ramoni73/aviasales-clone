@@ -172,6 +172,10 @@ input[type="checkbox"]:checked + label:after {
   text-align: center;
 }
 
+.ticketContainer:hover {
+  box-shadow: 0 10px 10px 10px rgba(221, 221, 221, 1);
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 2.5fr;

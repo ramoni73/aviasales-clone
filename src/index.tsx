@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+import store from "./store";
+import TicketsService from "./service/ticketsService";
+import {TicketsStoreServiceProvider} from './context/TicketsStoreServiceContext'
+
+const ticketsService = new TicketsService();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+      <TicketsStoreServiceProvider value={ticketsService}>
+          <React.StrictMode>
+              <App />
+          </React.StrictMode>
+      </TicketsStoreServiceProvider>
+  </Provider>,
   document.getElementById('root')
 );
 

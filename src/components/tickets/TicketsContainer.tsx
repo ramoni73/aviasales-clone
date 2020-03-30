@@ -1,15 +1,25 @@
-import React, { ReactElement } from 'react'
-import Ticket from './Ticket'
+import * as React from 'react';
+import Ticket from './Ticket';
+import { connect } from 'react-redux';
 
-interface Props {
-    
+export interface ITicketsContainerProps {
 }
 
-export default function TicketsContainer({}: Props): ReactElement {
-    return (
-        <div>
-            <Ticket />
-            <Ticket />
-        </div>
-    )
+class TicketsContainer extends React.Component<ITicketsContainerProps> {
+    public render() {
+        return (
+            <div>
+                <Ticket />
+                <Ticket />
+            </div>
+        );
+    }
 }
+
+const mapStateToProps = (state: any) => {
+    return {
+        tickets: state
+    }
+}
+
+export default connect(mapStateToProps)(TicketsContainer)
