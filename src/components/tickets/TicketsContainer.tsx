@@ -1,25 +1,18 @@
 import * as React from 'react';
 import Ticket from './Ticket';
-import { connect } from 'react-redux';
+import WithTicketsStoreService from "../../hoc/WithTicketsStoreService";
 
-export interface ITicketsContainerProps {
-}
+const TicketsContainer = ({ticketsService}:any) => {
+    const tickets = ticketsService.getTickets().tickets
+        .map((ticket:any) => {
+            return <Ticket key={ticket.id} ticket={ticket} />
+        });
 
-class TicketsContainer extends React.Component<ITicketsContainerProps> {
-    public render() {
-        return (
-            <div>
-                <Ticket />
-                <Ticket />
-            </div>
-        );
-    }
-}
+    return (
+        <div>
+            {tickets}
+        </div>
+    );
+};
 
-const mapStateToProps = (state: any) => {
-    return {
-        tickets: state
-    }
-}
-
-export default connect(mapStateToProps)(TicketsContainer)
+export default WithTicketsStoreService()(TicketsContainer)

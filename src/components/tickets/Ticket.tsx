@@ -2,25 +2,11 @@ import React from 'react'
 import FlightInfo from './FlightInfo'
 import BuySection from './BuySection'
 
-const Ticket = () => {
-    const data = {
-        origin: "VVO",
-        origin_name: "Владивосток",
-        destination: "TLV",
-        destination_name: "Тель - Авив",
-        departure_date: "12.05.18",
-        departure_time: "16:20",
-        arrival_date: "12.05.18",
-        arrival_time: "22:10",
-        carrier: "TK",
-        stops: 3,
-        price: 12400,
-    };
-
+const Ticket = (ticket:any) => {
     return (
         <div className="ticketContainer">
-            <BuySection data={data} />
-            <FlightInfo data={data} />
+            <BuySection data={ticket} />
+            <FlightInfo data={ticket} />
         </div>
     )
 };

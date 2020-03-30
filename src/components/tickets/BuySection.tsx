@@ -1,16 +1,14 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import BuyButton from './BuyButton'
 import airlineLogo from './airlineLogo.svg'
 
-interface Props {
-    [key: string]: any
-}
-
-export default function BuySection({ data }: Props): ReactElement {
+const BuySection = (data:any) => {
     return (
         <div className="buySectionContainer">
             <img src={airlineLogo} alt="airlineLogo" />
-            <BuyButton price={data.price} currency={" RUB"} />
+            <BuyButton price={data.data.ticket.price} currency={" RUB"} />
         </div>
     )
-}
+};
+
+export default BuySection
